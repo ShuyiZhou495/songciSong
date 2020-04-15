@@ -1,0 +1,42 @@
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px; }
+
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px; }
+
+.jumbotron {
+  margin: 0px auto;
+  padding: 70px 30px;
+  background-color: #7986CB;
+  color: floralwhite; }
+
+body {
+  z-index: 0; }
+
+.form-body{
+  padding-top: 70px;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: large;
+}
+
+.btn-submit {
+  margin-top: 20px;
+  background: #7986CB;
+  color: floralwhite
+}
+
+.navbar-dark {
+  background-color: #512DA8;}
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px; }

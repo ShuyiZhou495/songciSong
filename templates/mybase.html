@@ -1,0 +1,21 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block head %}
+    {{ super() }}
+    {{ fontawesome_css() }}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="#">
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+    {{ fontawesome_js() }}
+{% endblock %}
+
+{% block javascript %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='js/script.js')}}"></script>
+{% endblock %}
