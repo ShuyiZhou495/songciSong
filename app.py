@@ -11,7 +11,7 @@ fa = FontAwesome(app)
 def get_song(lyrics):
     """
     :param lyrics:
-    :return the json file of generated song including duration and key:
+    :return the json file of generated song including duration and key and lyrics:
     """
     pass
 
@@ -25,14 +25,16 @@ def get_img(json_input):
 def get_midi(json_input):
     """
     :param json_input:
-    :return the path of generated midi: eg, 'static/upload/img/output_song1.mid':
+    :return the path of generated midi (with lyrics) : eg, 'static/upload/img/output_song1.mid':
     """
+    pass
 
 @app.route('/to_song')
 def to_song():
     lyrics = request.args.get('lyric')
-    music_path = get_song(lyrics)
-    img_path = get_img(lyrics)
+    input_json = get_song(lyrics)
+    music_path = get_midi(input_json)
+    img_path = get_img(input_json)
     return render_template('2song.html',
                            music_path="static/upload/music/output_song1.wav",
                            lyric=lyrics,
