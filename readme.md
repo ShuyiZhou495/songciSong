@@ -25,7 +25,7 @@
 def get_song(lyrics):
     """
     :param lyrics:
-    :return the json file of generated song including duration and key:
+    :return the json file of generated song including duration and key and lyrics:
     """
     pass
 
@@ -39,6 +39,7 @@ def get_img(json_input):
 def get_midi(json_input):
     """
     :param json_input:
-    :return the path of generated midi: eg, 'static/upload/img/output_song1.mid':
+    :return the path of generated midi (with lyrics) : eg, 'static/upload/img/output_song1.mid':
     """
+    pass
 ```
