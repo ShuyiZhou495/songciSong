@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f64d6229-cc8e-4623-af08-af0f3de61abe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/93e94d920caa4444978e4e625b8ad14e_th.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/v2-614a31514288c76c5e93fb51b9dfbc67_b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/img/output_img1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/music/K歌之王 1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/music/output_song1.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/2song.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/2song.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586959799288</updated>
-      <workItem from="1586959800615" duration="21218000" />
+      <workItem from="1586959800615" duration="22080000" />
     </task>
     <servers />
   </component>

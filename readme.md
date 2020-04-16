@@ -25,14 +25,20 @@
 def get_song(lyrics):
     """
     :param lyrics:
-    :return: the path of generated song： 'static/upload/music/'+<filename>
+    :return the json file of generated song including duration and key:
     """
     pass
 
-def get_img(lyrics):
+def get_img(json_input):
     """
-    :param lyrics:
-    :return: the path of generated 五线谱: ''static/upload/img/'+<filename>
+    :param json_input:
+    :return the path of generated 五线谱: eg, 'static/upload/img/output_img1.jpg':
     """
     pass
+
+def get_midi(json_input):
+    """
+    :param json_input:
+    :return the path of generated midi: eg, 'static/upload/img/output_song1.mid':
+    """
 ```
