@@ -11,8 +11,28 @@
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background-color: #7986CB;
-  color: floralwhite; }
+  background-color: #9FA8DA;
+  color: floralwhite;
+  box-shadow: 0px 3px 7px #999;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.no-decoration {
+  text-underline: none;
+  color: floralwhite;
+}
+
+.no-decoration:hover,
+.no-decoration:focus{
+  text-decoration: none;
+  color: floralwhite;
+}
+
+.no-decoration a:active {
+  color: floralwhite;
+}
 
 body {
   z-index: 0; }
@@ -28,15 +48,6 @@ label {
 
 .btn-submit {
   margin-top: 20px;
-  background: #7986CB;
+  background: #9FA8DA;
   color: floralwhite
 }
-
-.navbar-dark {
-  background-color: #512DA8;}
-
-.tab-content {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 10px; }

@@ -11,14 +11,14 @@ fa = FontAwesome(app)
 def get_song(lyrics):
     """
     :param lyrics:
-    :return: the path of generated song： 'static/upload/music/'+<filename>
+    :return: the path of generated song： eg, 'static/upload/music/output_song1.wav'
     """
     pass
 
 def get_img(lyrics):
     """
     :param lyrics:
-    :return: the path of generated 五线谱: ''static/upload/img/'+<filename>
+    :return: the path of generated 五线谱: eg, 'static/upload/img/output_img1.jpg'
     """
     pass
 
@@ -28,9 +28,9 @@ def to_song():
     music_path = get_song(lyrics)
     img_path = get_img(lyrics)
     return render_template('2song.html',
-                           music_path="static/upload/music/K歌之王 1.wav",
+                           music_path="static/upload/music/output_song1.wav",
                            lyric=lyrics,
-                           img_path='static/upload/img/v2-614a31514288c76c5e93fb51b9dfbc67_b.jpg')
+                           img_path='static/upload/img/output_img1.jpg')
 
 @app.route('/')
 def index():
