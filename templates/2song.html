@@ -4,6 +4,32 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/player.css') }}">
+    	<!-- shim -->
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+	<script src="{{url_for('static',filename='inc/shim/Base64.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='inc/shim/Base64binary.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='inc/shim/WebAudioAPI.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='inc/shim/WebMIDIAPI.js')}}" type="text/javascript"></script>
+	<!-- jasmid package -->
+	<script src="{{url_for('static',filename='inc/jasmid/stream.js')}}"></script>
+	<script src="{{url_for('static',filename='inc/jasmid/midifile.js')}}"></script>
+	<script src="{{url_for('static',filename='inc/jasmid/replayer.js')}}"></script>
+	<!-- midi.js package -->
+	<script src="{{url_for('static',filename='js/midi/audioDetect.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename="js/midi/gm.js")}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/midi/loader.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/midi/plugin.audiotag.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/midi/plugin.webaudio.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/midi/plugin.webmidi.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/midi/player.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/midi/synesthesia.js')}}" type="text/javascript"></script>
+	<!-- utils -->
+	<script src="{{url_for('static',filename='js/util/dom_request_xhr.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='js/util/dom_request_script.js')}}" type="text/javascript"></script>
+	<!-- includes -->
+	<script src="{{url_for('static',filename='inc/timer.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='inc/colorspace.js')}}" type="text/javascript"></script>
+	<script src="{{url_for('static',filename='inc/event.js')}}" type="text/javascript"></script>
 {% endblock %}
 
 {% block content %}
@@ -35,7 +61,8 @@
                         </div>
                      </div>
                      <div class="content">
-                        <audio src="{{ music_path }}"></audio>
+                         <audio src="{{ music_path }}"></audio>
+
 
                     </div>
                     <!-- 进度条 -->
@@ -59,6 +86,54 @@
     </div>
 </body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="{{url_for('static',filename='js/script.js')}}"></script>
+    <script type="module" src="{{url_for('static',filename='js/script.js')}}"></script>
+    <script type="text/javascript">
+
+    var song = "{{ music_base64 }}";
+
+    MIDI.loader = new sketch.ui.Timer;
+	eventjs.add(window, "load", function(event) {
+		MIDI.loader = new sketch.ui.Timer;
+		MIDI.loadPlugin({
+			soundfontUrl: "./static/soundfont/",
+			onprogress: function(state, progress) {
+				MIDI.loader.setValue(progress * 100);
+			},
+			onsuccess: function() {
+				player = MIDI.Player;
+				player.timeWarp = 1; // speed the song is played back
+				player.loadFile(song, player.start);
+
+				$("#btn1").click(function(){
+                    if(player.playing) {
+                        player.pause();
+                        $('#btn1').removeClass('fa-pause').addClass('fa-play');
+                    }
+                    else {
+                        player.resume();
+                        $('#btn1').removeClass('fa-play').addClass('fa-pause');
+                    }
+                });
+
+                setInterval(present,500);    //每0.5秒计算进度条长度
+                $(".basebar").mousedown(function(ev){  //拖拽进度条控制进度
+                    var posX = ev.clientX;
+                    var targetLeft = $(this).offset().left;
+                    var percentage = (posX - targetLeft)/400*100;
+                    player.currentTime = player.endTime * percentage/100;
+                });
+                function present(){
+                    var length = player.currentTime/player.endTime*100;
+                    $('.progressbar').width(length+'%');//设置进度条长度
+                    //自动下一曲
+                    if(player.currentTime == player.endTime){
+                    $('#btn1').removeClass('fa-pause').addClass('fa-play');
+                    }
+                };
+			}
+		});
+	});
+
+    </script>
 {% endblock %}
 

@@ -21,17 +21,19 @@ gulp.task('runserver', function() {
 
 // browser sync
 gulp.task('browser-sync', function() {
-  browserSync({
-    notify: false,
-    proxy: "127.0.0.1:5000"
-  });
+    browserSync({
+        notify: false,
+        proxy: "127.0.0.1:5000"
+    });
+});
 
-  gulp.watch([
-      'songciGenerator/app/templates/*.*',
-    'songciGenerator/app/static/css/*.*',
-      'songciGenerator/app/static/js/*.*',
+gulp.task('watch', function () {
+      gulp.watch([
+      'templates/*.*',
+    'static/css/*.*',
+      'static/js/*.*',
   ], reload);
-})
+});
 
 // Default task: Watch Files For Changes & Reload browser
-gulp.task('default', gulp.parallel('runserver', 'browser-sync'));
+gulp.task('default', gulp.parallel('runserver', 'browser-sync', 'watch'));
