@@ -5,7 +5,6 @@
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/player.css') }}">
     	<!-- shim -->
-    <script src="{{url_for('static',filename='js/script.js')}}"></script>
 	<script src="{{url_for('static',filename='inc/shim/Base64.js')}}" type="text/javascript"></script>
 	<script src="{{url_for('static',filename='inc/shim/Base64binary.js')}}" type="text/javascript"></script>
 	<script src="{{url_for('static',filename='inc/shim/WebAudioAPI.js')}}" type="text/javascript"></script>
@@ -30,6 +29,9 @@
 	<script src="{{url_for('static',filename='inc/timer.js')}}" type="text/javascript"></script>
 	<script src="{{url_for('static',filename='inc/colorspace.js')}}" type="text/javascript"></script>
 	<script src="{{url_for('static',filename='inc/event.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='soundfont/acoustic_grand_piano-ogg.js')}}" type="text/javascript">></script>
+    <script src="{{url_for('static', filename='soundfont/acoustic_grand_piano-mp3.js')}}" type="text/javascript">></script>
+
 {% endblock %}
 
 {% block content %}
@@ -60,12 +62,7 @@
 
                         </div>
                      </div>
-                     <div class="content">
-                         <audio src="{{ music_path }}"></audio>
-
-
-                    </div>
-                    <!-- 进度条 -->
+                   <!-- 进度条 -->
                     <span class="basebar">
                         <span class="progressbar"></span>
                     </span>
@@ -89,20 +86,20 @@
     <script type="module" src="{{url_for('static',filename='js/script.js')}}"></script>
     <script type="text/javascript">
 
-    var song = "{{ music_base64 }}";
 
     MIDI.loader = new sketch.ui.Timer;
 	eventjs.add(window, "load", function(event) {
 		MIDI.loader = new sketch.ui.Timer;
 		MIDI.loadPlugin({
 			soundfontUrl: "./static/soundfont/",
+            instrument: "acoustic_grand_piano",
 			onprogress: function(state, progress) {
 				MIDI.loader.setValue(progress * 100);
 			},
 			onsuccess: function() {
 				player = MIDI.Player;
 				player.timeWarp = 1; // speed the song is played back
-				player.loadFile(song, player.start);
+                player.loadFile('{{music_path}}', player.start);
 
 				$("#btn1").click(function(){
                     if(player.playing) {

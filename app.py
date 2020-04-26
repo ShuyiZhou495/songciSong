@@ -30,19 +30,14 @@ def get_midi(json_input):
     """
     pass
 
-def transfer_to_base64(midi):
-    with open(midi, 'rb') as data:
-        return 'data:audio/midi;base64,' + str(base64.b64encode(data.read()))[2:-1]
-
 @app.route('/to_song')
 def to_song():
     lyrics = request.args.get('lyric')
     input_json = get_song(lyrics)
     music_path = get_midi(input_json)
-    #music_base64 = transfer_to_base64(music_path)
     img_path = get_img(input_json)
     return render_template('2song.html',
-                           music_base64=transfer_to_base64("static/upload/music/Super Mario 64 - Medley.mid"),
+                           music_path="static/upload/music/Lonely Christmas.mid",
                            lyric=lyrics,
                            img_path='static/upload/img/output_img1.jpg')
 
