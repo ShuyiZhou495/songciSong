@@ -2,18 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f64d6229-cc8e-4623-af08-af0f3de61abe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fun_get_img.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/player.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/player.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/music/Lonely Christmas.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/music/Super Mario 64 - Medley.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/music/output_song1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/2song.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/2song.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/output.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_253cf922dd4a4920ab4d10aaae7e8ebd.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_2d8134b9d2ff4dc98c42697f9337d092.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_3951447f55b1464da54e07bc737b9fa8.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_3c1b1208dc8148239d714305f76d29ca.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_41be97a548fb43769b27dd3482fcbf2c.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_4f3cbc01e7064690aefae9ec9e338cc2.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_4f5101c9d04b4e3499facd1492051e96.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_56081dc5a10247caa8ac19f0cb8f59e8.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_5a393dd008c34004b9482bd1d9dc9054.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_5dcac4ed3fc94f319476c99aec54b191.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_6cfb69ed4dc842ecb642099901e8008f.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_71c2c468e26d452187ccc41684811015.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_7b34c9ec8e4942c58979d8935f4e5854.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_7b58e79b69f8498f9dc5d2d9a9024c2d.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_8ab2b69e268b4d4f9f81e61ac1ffb781.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_8e61feb7e70942ffa362acb6922b43d1.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_91fa6a697c574227a4aa3cfe7cf41967.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_9b5e6af0a3504753a059bc196d61afda.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_a533a786c4c74aea8cd90a2fe3d535a3.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_bb12fa4d5ea64d6c95c8b111f39b9908.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_c66d09b271304c0e8c7dbb8de29e6ecd.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_cf856b1f96f54c3fad1266c9a42dd479.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_d6d55f829ae74365887f168992c537e2.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/music/tmpfile_fcbfae408ad34fbe816d48242d0c77d4.mid" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +153,7 @@
       <workItem from="1586959800615" duration="22732000" />
       <workItem from="1587772260327" duration="20651000" />
       <workItem from="1587965133209" duration="571000" />
-      <workItem from="1588454215201" duration="15290000" />
+      <workItem from="1588454215201" duration="15415000" />
     </task>
     <servers />
   </component>
