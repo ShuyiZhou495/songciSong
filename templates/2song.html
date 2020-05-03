@@ -183,12 +183,15 @@
                 }
 
                 var lineNo = 0;
-                eventjs.add(window, 'lineheight', function () {
-                    if (lineNo == medisArray.length - 1 && player.currentTime.toFixed(3) >= parseFloat(medisArray[lineNo].t)) {
+                player.addListener(function () {
+                    console.log('message');
+                    console.log(parseFloat(medisArray[lineNo].t) * 1000);
+                    console.log(player.currentTime.toFixed(3));
+                    if (lineNo == medisArray.length - 1 && player.currentTime.toFixed(3) >= parseFloat(medisArray[lineNo].t) * 1000) {
                         lineHeight(lineNo);
                     }
-                    if (parseFloat(medisArray[lineNo].t) <= player.currentTime.toFixed(3) &&
-                        player.currentTime.toFixed(3) <= parseFloat(medisArray[lineNo + 1].t)) {
+                    if (parseFloat(medisArray[lineNo].t) * 1000 <= player.currentTime.toFixed(3) &&
+                        player.currentTime.toFixed(3) <= parseFloat(medisArray[lineNo + 1].t) * 1000) {
                         lineHeight(lineNo);
                         lineNo++;
                     }

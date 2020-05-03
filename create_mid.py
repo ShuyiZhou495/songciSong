@@ -33,12 +33,15 @@ def get_duration_note(input):
 
 def get_lyric_time(input):
     result = []
+    last_time = 0
     for item in input:
         length = len(item['duration'])
         duration = length * 0.3 + 0.7
         for i in range(length):
             duration += float(item['duration'][i])
-        result.append({'lyrics': item['lyrics'], 't': duration})
+        result.append({'lyrics': item['lyrics'], 't': last_time})
+        last_time += duration
+
     return result
 
 def create_midi(input):
