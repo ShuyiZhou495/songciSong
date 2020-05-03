@@ -116,23 +116,28 @@
                 });
 
                 setInterval(present,500);    //每0.5秒计算进度条长度
+
+                var lineNo = 0;
+
                 $(".basebar").mousedown(function(ev){  //拖拽进度条控制进度
                     var posX = ev.clientX;
                     var targetLeft = $(this).offset().left;
-                    var percentage = (posX - targetLeft)/400*100;
+                    var percentage = (posX - targetLeft)/340*100;
                     player.currentTime = player.endTime * percentage/100;
+                    which_line(player.currentTime);
                 });
                 function present(){
                     var length = player.currentTime/player.endTime*100;
                     $('.progressbar').width(length+'%');//设置进度条长度
                     //自动下一曲
-                    if(player.currentTime == player.endTime){
+                    if(player.currentTime === player.endTime){
                     $('#btn1').removeClass('fa-pause').addClass('fa-play');
                     }
-                };
+                }
 
                 // lyrics from https://blog.csdn.net/maid_04/article/details/80849563
                 var medisArray = {{ time_lyric|safe }};
+
                 function createLrc () {
                     var ul = $("#lyrics");
                     // 遍历medisArray，并且生成li标签，将数组内的文字放入li标签
@@ -175,19 +180,40 @@
                         //如果高亮显示的歌词在A上面，那就将滚动条向上滚动，滚动距离为 A到可视窗口的距离-当前高亮行距离顶部的距离-滚动条已经卷起的高度
                         $ul.scrollTop -= Math.ceil($ul.clientHeight * fraction - (nowline.offsetTop - $ul.scrollTop));
 
-                    } else if (_scrollTop == 0) {
+                    } else if (_scrollTop === 0) {
                         $ul.scrollTop = 0;
                     } else {
                         $ul.scrollTop += $(ul.find('li').get(0)).height();
                     }
                 }
 
-                var lineNo = 0;
+
+
+                function which_line(currentTime) {
+                    var ul = $("#lyrics");
+                    if (currentTime.toFixed(3) >= parseFloat(medisArray[medisArray.length-1].t) * 1000) {
+                        if(lineNo !== medisArray.length -1) {
+                            $(ul.find("li").get(topNum + lineNo -1)).removeClass("lineheight");
+                        }
+                        lineNo = medisArray.length -1;
+                        return
+                    }
+                    for (i=0; i<medisArray.length -1 ;i++){
+                        if (currentTime.toFixed(3)>=parseFloat(medisArray[i].t) * 1000 && currentTime.toFixed(3)<=parseFloat(medisArray[i+1].t) * 1000) {
+                            if(lineNo !== i) {
+                                $(ul.find("li").get(topNum + lineNo -1)).removeClass("lineheight");
+                            }
+                            lineNo = i;
+                            return
+                        }
+                    }
+                }
+
                 player.addListener(function () {
                     console.log('message');
                     console.log(parseFloat(medisArray[lineNo].t) * 1000);
                     console.log(player.currentTime.toFixed(3));
-                    if (lineNo == medisArray.length - 1 && player.currentTime.toFixed(3) >= parseFloat(medisArray[lineNo].t) * 1000) {
+                    if (lineNo === medisArray.length - 1 && player.currentTime.toFixed(3) >= parseFloat(medisArray[lineNo].t) * 1000) {
                         lineHeight(lineNo);
                     }
                     if (parseFloat(medisArray[lineNo].t) * 1000 <= player.currentTime.toFixed(3) &&
@@ -198,7 +224,6 @@
                 });
 			}
 		});
-
 
 	});
 

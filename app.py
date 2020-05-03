@@ -25,12 +25,12 @@ def to_song():
     lyrics = request.args.get('lyric')
     input_json = get_song(lyrics)
     music_path = create_midi(input)
-    # img_path = get_img(input)
+    img_path = get_img(input)
     time_lyric = get_lyric_time(input)
     return render_template('2song.html',
                            music_path="static/upload/music/" + music_path,
                            lyric=lyrics,
-                           img_path='static/upload/img/' + 'output_img1.jpg',
+                           img_path='static/upload/img/' + img_path,
                            time_lyric=time_lyric)
 
 @app.route('/')

@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f64d6229-cc8e-4623-af08-af0f3de61abe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_mid.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_mid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fun_get_img.py" beforeDir="false" afterPath="$PROJECT_DIR$/fun_get_img.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/player.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/player.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/output-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/img/output-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/img/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/2song.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/2song.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,7 +133,7 @@
       <workItem from="1586959800615" duration="22732000" />
       <workItem from="1587772260327" duration="20651000" />
       <workItem from="1587965133209" duration="571000" />
-      <workItem from="1588454215201" duration="16391000" />
+      <workItem from="1588454215201" duration="19904000" />
     </task>
     <servers />
   </component>
