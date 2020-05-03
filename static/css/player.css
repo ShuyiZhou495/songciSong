@@ -40,11 +40,13 @@
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 12px ;
 	transition: all 1s;
+	overflow: hidden;
 }
-.lyric li.active {
-  font-size: 13px;
-  color: #ffffff;
+.lyric li.lineheight {
+	font-size: 20px;
+	color: white;
 }
+
 .content{
 	height: 10px;
 	width: 400px;

@@ -11,6 +11,10 @@ flask-mongoengine = "*"
 flask-bootstrap = "*"
 flask-fontawesome = "*"
 python-dotenv = "*"
+mido = "*"
+pygame = "*"
+music21 = "*"
+pretty-midi = "*"
 
 [requires]
 python_version = "3.7"

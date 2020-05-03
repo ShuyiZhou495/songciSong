@@ -1,13 +1,15 @@
 
 
 
-$(function () {
-    console.log('message');
-    var lyric_breaked_line = $("#lyrics")[0].textContent.replace(/\n/g, '<li>');
-    $("#lyrics").html(lyric_breaked_line);
+// $(function () {
+//     console.log('message');
+//     var lyric_breaked_line = $("#lyrics")[0].textContent.replace(/\n/g, '<li>');
+//     $("#lyrics").html(lyric_breaked_line);
+//
+//
+// });
 
 
-});
 
 // //播放控制
 // player.load($("audio")[0]);
