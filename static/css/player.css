@@ -25,7 +25,7 @@
 }
 .background .music-lyric .lyric-view{
 	height: 400px;
-	overflow: scroll;
+	overflow: auto;
 }
 .background .music-lyric ul{
 	list-style-type: none;
@@ -40,7 +40,6 @@
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 12px ;
 	transition: all 1s;
-	overflow: hidden;
 }
 .lyric li.lineheight {
 	font-size: 20px;
@@ -52,7 +51,6 @@
 	width: 400px;
 }
 
-
 .basebar{
 	display: block;
 	border:none;
@@ -62,7 +60,15 @@
 	border-radius: 2px;
 	background-color: #414141;
 	position: relative;
+	margin-bottom: 4px;
 }
+
+.basebar:hover{
+	height: 8px;
+	background-color: #898b90;
+	margin-bottom: 0;
+}
+
 .basebar .progressbar{
 	display: block;
 	border:none;
@@ -71,18 +77,21 @@
 	border-radius: 2px;
 	background-color: #cdd2d7;
 }
+
+.basebar:hover .progressbar{
+	height: 8px;
+}
+
 .controls{
 	width: 340px;
 	height: 50px;
-	padding: 20px 20px;
+	padding: 24px 20px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
-.controls .play-control,.music-control{
-	display: inline-block;
-}
+
 .controls .play-control .btn1{
 	display: inline-block;
 	width: 38px;
@@ -93,7 +102,20 @@
 	font-size: 20px;
 	text-align: center;
 	line-height: 38px;
+	margin-bottom: 10px;
 }
+
+.controls .play-control .btn1:hover{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	border-radius: 23px;
+	background: #41253a;
+	color: #d9b9c4;
+	line-height: 45px;
+
+}
+
 .controls .music-control{
 	float: left;
 	line-height: 38px;
@@ -109,9 +131,11 @@
 img {
 	padding: 20px 20px;
 	max-width: 420px;
+
 }
 .img-responsive {
 	height: 500px;
 	margin-top: 10px;
 	overflow: scroll;
+
 }
