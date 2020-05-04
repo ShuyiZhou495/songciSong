@@ -119,11 +119,13 @@
 
                 var lineNo = 0;
 
-                $(".basebar").mousedown(function(ev){  //拖拽进度条控制进度
+                $(".basebar").mousedown(function(ev){
+                    player.pause();//拖拽进度条控制进度
                     var posX = ev.clientX;
                     var targetLeft = $(this).offset().left;
                     var percentage = (posX - targetLeft)/340*100;
                     player.currentTime = player.endTime * percentage/100;
+                    player.resume();
                     which_line(player.currentTime);
                 });
                 function present(){
