@@ -120,12 +120,15 @@
                 var lineNo = 0;
 
                 $(".basebar").mousedown(function(ev){
+                    var playing = player.playing;
                     player.pause();//拖拽进度条控制进度
                     var posX = ev.clientX;
                     var targetLeft = $(this).offset().left;
                     var percentage = (posX - targetLeft)/340*100;
                     player.currentTime = player.endTime * percentage/100;
-                    player.resume();
+                    if(playing) {
+                        player.resume();
+                    }
                     which_line(player.currentTime);
                 });
                 function present(){
