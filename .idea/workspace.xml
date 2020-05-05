@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f64d6229-cc8e-4623-af08-af0f3de61abe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/css/player.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/styles.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/player.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/player.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles_old.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/require.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/img/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/2song.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/2song.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mybase.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mybase.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,17 +58,18 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/static/js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static/upload/music" />
       <recent name="$PROJECT_DIR$/static/inc" />
       <recent name="$PROJECT_DIR$/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -127,7 +140,8 @@
       <workItem from="1586959800615" duration="22732000" />
       <workItem from="1587772260327" duration="20651000" />
       <workItem from="1587965133209" duration="571000" />
-      <workItem from="1588454215201" duration="25100000" />
+      <workItem from="1588454215201" duration="26524000" />
+      <workItem from="1588641067763" duration="5220000" />
     </task>
     <servers />
   </component>

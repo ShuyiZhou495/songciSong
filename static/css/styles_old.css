@@ -1,13 +1,13 @@
 .row-header {
   margin: 0px auto;
-  padding: 0px 0px;
-}
+  padding: 0px 0px; }
+
 .row-content {
   margin: 0px auto;
   padding: 50px 0px;
   border-bottom: 1px ridge;
-  min-height: 400px;
-}
+  min-height: 400px; }
+
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
@@ -17,30 +17,39 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+
 .no-decoration {
   text-underline: none;
   color: floralwhite;
 }
+
 .no-decoration:hover,
-.no-decoration:focus {
+.no-decoration:focus{
   text-decoration: none;
   color: floralwhite;
 }
+
 .no-decoration a:active {
   color: floralwhite;
 }
+
+
+
 body {
-  z-index: 0;
-}
-.form-body {
+  z-index: 0; }
+
+.form-body{
   padding-top: 70px;
 }
+
 label {
   margin-bottom: 10px;
   font-size: large;
 }
+
 .btn-submit {
   margin-top: 20px;
   background: #9FA8DA;
-  color: floralwhite;
+  color: floralwhite
 }

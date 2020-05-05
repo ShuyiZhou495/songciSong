@@ -1,0 +1,148 @@
+@background-color: #9FA8DA;
+@wrapper-bg-color: #E8EAF6;
+@lyric-height: 400px;
+@lyric-color: rgba(255, 255, 255, 0.6);
+@lyric-font-size: 12px;
+@lyric-hover-font-size: 20px;
+@wrapper-height: 500px;
+@wrapper-width: 420px;
+@content-width: @wrapper-width - 20px;
+
+
+
+.wrapper{
+	width: @wrapper-width;
+	height: @wrapper-height;
+	margin-bottom: 20px;
+	background: @wrapper-bg-color;
+	position: relative;
+	top: 50%;
+	margin-top: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 6px 7px #999;
+}
+.background{
+	width: 100%;
+	height: 400px;
+	position: relative;
+	text-align: center;
+
+}
+.background .music-lyric{
+	width: 100%;
+	height: @lyric-height;
+	background-color: @background-color;
+	overflow: auto;
+}
+.background .music-lyric ul{
+	list-style-type: none;
+	position: relative;
+	transition: all 1s;
+}
+.lyric li{
+	padding: 10px 30px 2px 0px;
+	position: relative;
+	text-align: center;
+	color: @lyric-color;
+	font-size: @lyric-font-size;
+	transition: all 1s;
+}
+.lyric li.lineheight {
+	font-size: @lyric-hover-font-size;
+	color: white;
+}
+
+.content{
+	height: 10px;
+	width: @content-width;
+}
+
+.basebar{
+	display: block;
+	border:none;
+	width: 340px;
+	height: 4px;
+	margin: 0px auto 0px auto;
+	border-radius: 2px;
+	background-color: #414141;
+	position: relative;
+	margin-bottom: 4px;
+}
+
+.basebar:hover{
+	height: 8px;
+	background-color: #898b90;
+	margin-bottom: 0;
+}
+
+.basebar .progressbar{
+	display: block;
+	border:none;
+	width: 0;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #cdd2d7;
+}
+
+.basebar:hover .progressbar{
+	height: 8px;
+}
+
+.controls{
+	width: 340px;
+	height: 50px;
+	padding: 24px 20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.controls .play-control .btn1{
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	border-radius: 19px;
+	background: #414141;
+	color: #d9d9d9;
+	font-size: 20px;
+	text-align: center;
+	line-height: 38px;
+	margin-bottom: 10px;
+}
+
+.controls .play-control .btn1:hover{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	border-radius: 23px;
+	background: #41253a;
+	color: #d9b9c4;
+	line-height: 45px;
+
+}
+
+.controls .music-control{
+	float: left;
+	line-height: 38px;
+}
+.controls .music-control span{
+	margin-left: 10px;
+	font-size: 22px;
+}
+.controls .music-control span:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+img {
+	padding: 20px 20px;
+	max-width: @wrapper-width;
+
+}
+.img-responsive {
+	height: @wrapper-height;
+	margin-top: 10px;
+	overflow: scroll;
+
+}

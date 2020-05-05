@@ -1,10 +1,17 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     plumber = require('gulp-plumber'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    less = require('gulp-less');
 
 var reload = browserSync.reload;
 var exec = require('child_process').exec;
+
+var files = [
+      'templates/*.html',
+    'static/css/*.css',
+      'static/js/*.*',
+    ];
 
 // Uglify javascript
 // gulp.task('scripts', function() {
@@ -14,26 +21,28 @@ var exec = require('child_process').exec;
 //     .pipe(gulp.dest('build/js'))
 // });
 
-//Run Flask server
-gulp.task('runserver', function() {
-    var proc = exec('python songciGenerator/app.py');
-});
-
 // browser sync
 gulp.task('browser-sync', function() {
+
+    var proc = exec('flask run');
     browserSync({
         notify: false,
         proxy: "127.0.0.1:5000"
     });
 });
 
+
+gulp.task('less:watch', function () {
+    gulp.watch(['./static/css/*.less']).on('change', function () {
+        return gulp.src('./static/css/*.less')
+        .pipe(less())
+        .pipe(gulp.dest('./static/css'));
+    });
+});
+
 gulp.task('watch', function () {
-      gulp.watch([
-      'templates/*.*',
-    'static/css/*.*',
-      'static/js/*.*',
-  ], reload);
+      gulp.watch(files).on('change', reload);
 });
 
 // Default task: Watch Files For Changes & Reload browser
-gulp.task('default', gulp.parallel('runserver', 'browser-sync', 'watch'));
+gulp.task('default',gulp.parallel(['browser-sync', 'watch', 'less:watch']));

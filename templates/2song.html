@@ -86,7 +86,6 @@
     </div>
 </body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="module" src="{{url_for('static',filename='js/script.js')}}"></script>
     <script type="text/javascript">
 
 
@@ -216,11 +215,12 @@
                 }
 
                 player.addListener(function () {
-                    console.log('message');
-                    console.log(parseFloat(medisArray[lineNo].t) * 1000);
-                    console.log(player.currentTime.toFixed(3));
-                    if (lineNo === medisArray.length - 1 && player.currentTime.toFixed(3) >= parseFloat(medisArray[lineNo].t) * 1000) {
+                    if(lineNo === medisArray.length) {
+
+                    }
+                    else if (lineNo === medisArray.length - 1 && player.currentTime.toFixed(3) >= parseFloat(medisArray[lineNo].t) * 1000) {
                         lineHeight(lineNo);
+                        lineNo++;
                     }
                     else if (parseFloat(medisArray[lineNo].t) * 1000 <= player.currentTime.toFixed(3) &&
                         player.currentTime.toFixed(3) <= parseFloat(medisArray[lineNo + 1].t) * 1000) {
