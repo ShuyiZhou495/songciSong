@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f64d6229-cc8e-4623-af08-af0f3de61abe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/en_pred.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/output-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/img/output-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/static/upload/img/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fun_get_img.py" beforeDir="false" afterPath="$PROJECT_DIR$/fun_get_img.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplified_traditional.py" beforeDir="false" afterPath="$PROJECT_DIR$/simplified_traditional.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/output-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/output_img1.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +138,7 @@
       <workItem from="1588454215201" duration="26524000" />
       <workItem from="1588641067763" duration="5479000" />
       <workItem from="1589517177692" duration="2980000" />
-      <workItem from="1589520447529" duration="2367000" />
+      <workItem from="1589520447529" duration="5880000" />
     </task>
     <servers />
   </component>

@@ -24,7 +24,15 @@ def chs_to_cht(sentence):#传入参数为列表
         :return:
         """
         #sentence =",".join(sentence)
-        sentence = Converter('zh-hant').convert(sentence)
+        result = ""
+        for word in sentence:
+                if word!=' ':
+                        if(word=='\n' or word=='，' or word=='。' or word=='？' or word =='！'):
+                                result = result.rstrip()
+                                result += '\n'
+                        else:
+                                result += (word + ' ')
+        result = result.rstrip()
+        sentence = Converter('zh-hant').convert(result)
         sentence.encode('utf-8')
         return sentence
-
