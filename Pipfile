@@ -15,6 +15,7 @@ mido = "*"
 pygame = "*"
 music21 = "*"
 pretty-midi = "*"
+torch = "*"
 
 [requires]
 python_version = "3.7"
