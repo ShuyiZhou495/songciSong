@@ -10,11 +10,12 @@ def get_duration_note(input):
     """
     duration = []
     note = []
-    delay = [0]
+    delay = [0.3]
     for item in input:
         duration_list = item['duration']
         note_list = item['key']
-        for i in range(len(note_list)):
+        lyric = item['lyrics']
+        for i in range(int((len(lyric) + 1)/2)):
             dur = duration_list[i]
             no = note_list[i]
             if ',' in no:

@@ -25,9 +25,10 @@ def chs_to_cht(sentence):#传入参数为列表
         """
         #sentence =",".join(sentence)
         result = ""
+        punc = ['。', '，', '？', '！', '、', '“', '”']
         for word in sentence:
                 if word!=' ':
-                        if(word=='\n' or word=='，' or word=='。' or word=='？' or word =='！'):
+                        if(word=='\n' or word in punc):
                                 result = result.rstrip()
                                 result += '\n'
                         else:

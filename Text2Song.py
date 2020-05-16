@@ -87,10 +87,12 @@ class Text2song(object):
                                             self.use_cuda_dur,self,self.use_cuda_key.}"""
 
     def get_song(self, lyric):
-        def stop_before_eos(li):
+        def stop_before_eos(li, length):
             if '_EOS_' in li:
                 i = li.index('_EOS_')
-                return li[:i]
+                li = li[:i]
+            while(li.__len__()<length):
+                li.append(li[-1])
             return li
 
         def important_function_in_while_loop(trf, sent, encoder, decoder, de_vocab, use_cuda, en_sent):
@@ -156,9 +158,9 @@ class Text2song(object):
                 if self.use_cuda_key: decoder_inputs_key = decoder_inputs_key.cuda()
                 decoder_outputs_key, decoder_state_key = self.decoder_key(decoder_inputs_key, encoder_output_key,
                                                                      decoder_state_key)
-
+            length = len(sent.split())
             pred_list.append(
-                {'lyrics': sent, 'key': stop_before_eos(pred_sent_key), 'duration': stop_before_eos(pred_sent_dur)})
+                {'lyrics': sent, 'key': stop_before_eos(pred_sent_key, length), 'duration': stop_before_eos(pred_sent_dur, length)})
             # pred_list.append({'lyrics': sent, 'key': pred_sent_key, 'duration': pred_sent_dur})
 
         return pred_list

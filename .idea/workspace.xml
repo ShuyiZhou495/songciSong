@@ -3,18 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f64d6229-cc8e-4623-af08-af0f3de61abe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_0681f6ad4faa4e98b1d50d8b902fedb2-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_0681f6ad4faa4e98b1d50d8b902fedb2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_68680a34d2b641f78933fa39e64eb9bd-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_68680a34d2b641f78933fa39e64eb9bd.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_86609a52747140f2839869c378f244d5-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_86609a52747140f2839869c378f244d5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_8f73b39d02674471869c6f3e1ee5347a-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_8f73b39d02674471869c6f3e1ee5347a.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_e066ef8f31ae4bb0855a5e3cbbe62471-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_e066ef8f31ae4bb0855a5e3cbbe62471.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_ed36e07aebd348b9a9b7e72854061bbb-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/tmpfile_ed36e07aebd348b9a9b7e72854061bbb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Text2Song.py" beforeDir="false" afterPath="$PROJECT_DIR$/Text2Song.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_mid.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_mid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplified_traditional.py" beforeDir="false" afterPath="$PROJECT_DIR$/simplified_traditional.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/2song.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/2song.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +140,7 @@
       <workItem from="1588454215201" duration="26524000" />
       <workItem from="1588641067763" duration="5479000" />
       <workItem from="1589517177692" duration="2980000" />
-      <workItem from="1589520447529" duration="5925000" />
+      <workItem from="1589520447529" duration="10637000" />
     </task>
     <servers />
   </component>

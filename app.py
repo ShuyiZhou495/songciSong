@@ -7,6 +7,7 @@ from create_mid import create_midi, get_lyric_time
 from fun_get_img import get_img
 from Text2Song import Text2song
 from simplified_traditional import chs_to_cht
+import json
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
@@ -20,6 +21,8 @@ def to_song():
     lyrics_cht = chs_to_cht(lyrics)
     mySong = Text2song()
     input = mySong.get_song(lyrics_cht)
+    with open("output.json", 'w') as file:
+        json.dump(input, file, ensure_ascii=False)
     music_path = create_midi(input)
     img_path = get_img(input)
     time_lyric = get_lyric_time(input)

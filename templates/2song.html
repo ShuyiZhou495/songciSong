@@ -133,7 +133,7 @@
                 function present(){
                     var length = player.currentTime/player.endTime*100;
                     $('.progressbar').width(length+'%');//设置进度条长度
-                    //自动下一曲
+
                     if(player.currentTime === player.endTime){
                     $('#btn1').removeClass('fa-pause').addClass('fa-play');
                     }
@@ -167,7 +167,7 @@
                     // 实现文字滚动
                     var _scrollTop;
                     height = 400;
-                    $lyric = document.getElementsByClassName('lyric-view')[0];
+
                     if (height * fraction > nowline.offsetTop) {
                         _scrollTop = 0;
                     } else if (nowline.offsetTop > ($ul.scrollHeight - height * (1 - fraction))) {
