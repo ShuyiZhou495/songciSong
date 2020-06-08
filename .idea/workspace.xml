@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f64d6229-cc8e-4623-af08-af0f3de61abe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/final4_dura_model_2.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final4_note_model_2.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generateClasses/Seq2Seq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generateClasses/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate_note_dura.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/to_img.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/2song.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/2song.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +136,7 @@
       <workItem from="1589520447529" duration="10852000" />
       <workItem from="1589804840641" duration="1401000" />
       <workItem from="1590571085274" duration="765000" />
-      <workItem from="1591625539097" duration="4635000" />
+      <workItem from="1591625539097" duration="4949000" />
     </task>
     <servers />
   </component>
