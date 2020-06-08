@@ -4,9 +4,20 @@ from flask import Flask, request, render_template
 from flask_bootstrap import Bootstrap
 from flask_fontawesome import FontAwesome
 from create_mid import create_midi, get_lyric_time
-from fun_get_img import get_img
-from Text2Song import Text2song
-from simplified_traditional import chs_to_cht
+from to_img import get_img
+# from fun_get_img import get_img
+# from Text2Song import Text2song
+# from simplified_traditional import chs_to_cht
+from generateClasses.Seq2Seq import Seq2Seq
+from generate_note_dura import Encoder
+from generate_note_dura import EncoderLayer
+from generate_note_dura import MultiHeadAttentionLayer
+from generate_note_dura import PositionwiseFeedforwardLayer
+from generate_note_dura import Decoder
+from generate_note_dura import DecoderLayer
+from generate_note_dura import generate_note_dura
+
+
 import json
 
 app = Flask(__name__)
@@ -18,9 +29,10 @@ fa = FontAwesome(app)
 @app.route('/to_song')
 def to_song():
     lyrics = request.args.get('lyric')
-    lyrics_cht = chs_to_cht(lyrics)
-    mySong = Text2song()
-    input = mySong.get_song(lyrics_cht)
+    # lyrics_cht = chs_to_cht(lyrics)
+    # mySong = Text2song()
+    # input = mySong.get_song(lyrics_cht)
+    input = generate_note_dura(lyrics)
     with open("output.json", 'w') as file:
         json.dump(input, file, ensure_ascii=False)
     music_path = create_midi(input)
@@ -40,7 +52,6 @@ def index():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
 
 
 if __name__ == '__main__':

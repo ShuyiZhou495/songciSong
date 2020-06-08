@@ -16,6 +16,7 @@ pygame = "*"
 music21 = "*"
 pretty-midi = "*"
 torch = "*"
+xpinyin = "*"
 
 [requires]
 python_version = "3.7"

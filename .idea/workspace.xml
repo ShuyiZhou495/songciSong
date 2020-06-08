@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f64d6229-cc8e-4623-af08-af0f3de61abe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final4_dura_model_2.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final4_note_model_2.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generateClasses/Seq2Seq.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generateClasses/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generate_note_dura.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/to_img.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Text2Song.py" beforeDir="false" afterPath="$PROJECT_DIR$/Text2Song.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_mid.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_mid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simplified_traditional.py" beforeDir="false" afterPath="$PROJECT_DIR$/simplified_traditional.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/2song.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/2song.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/generate_note_dura.py" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -54,19 +57,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/static/upload/music" />
-      <recent name="$PROJECT_DIR$/static/inc" />
-      <recent name="$PROJECT_DIR$/static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Text2Song" />
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static/upload/music" />
+      <recent name="$PROJECT_DIR$/static/inc" />
+      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -81,8 +84,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.fun_get_img">
-    <configuration name="fun_get_img" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Flask server.project">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,7 +98,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fun_get_img.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -121,7 +124,7 @@
     </configuration>
     <list>
       <item itemvalue="Flask server.project" />
-      <item itemvalue="Python.fun_get_img" />
+      <item itemvalue="Python.test" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -140,7 +143,10 @@
       <workItem from="1588454215201" duration="26524000" />
       <workItem from="1588641067763" duration="5479000" />
       <workItem from="1589517177692" duration="2980000" />
-      <workItem from="1589520447529" duration="10637000" />
+      <workItem from="1589520447529" duration="10852000" />
+      <workItem from="1589804840641" duration="1401000" />
+      <workItem from="1590571085274" duration="765000" />
+      <workItem from="1591625539097" duration="4635000" />
     </task>
     <servers />
   </component>
@@ -162,5 +168,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/project$fun_get_img.coverage" NAME="fun_get_img Coverage Results" MODIFIED="1588479222285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/project$generate_note_dura.coverage" NAME="test Coverage Results" MODIFIED="1591627154090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/project$project.coverage" NAME="project Coverage Results" MODIFIED="1591629148449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -157,6 +157,7 @@
                 function lineHeight(lineno) {
                     var ul = $("#lyrics");
                     var $ul = document.getElementById('lyrics');
+                    var $lyric = document.getElementsByClassName('music-lyric')[0];
                     // 令正在唱的那一行高亮显示
                     if (lineno > 0) {
                         $(ul.find("li").get(topNum + lineno - 1)).removeClass("lineheight");
