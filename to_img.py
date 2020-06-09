@@ -84,7 +84,7 @@ def get_img(json_input):
     conv =  music21.converter.subConverters.ConverterLilypond()
     uuid_str = uuid.uuid4().hex
     temp_file_name = 'tmpfile_%s' % uuid_str
-    filePath = ‘static/upload/img/'+temp_file_name
+    filePath = 'static/upload/img/'+temp_file_name
     out_filepath = conv.write(m, fmt = 'lilypond', fp=filePath, subformats = ['png'])
     
     return out_filepath
