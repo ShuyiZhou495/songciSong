@@ -41,7 +41,7 @@ def to_song():
     return render_template('2song.html',
                            music_path="static/upload/music/" + music_path,
                            lyric=lyrics,
-                           img_path='static/upload/img/' + img_path,
+                           img_path=img_path,
                            time_lyric=time_lyric)
 
 @app.route('/')
