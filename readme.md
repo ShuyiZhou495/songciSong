@@ -5,7 +5,7 @@
 0. 安装pipenv 用`pipenv -v`确定安装了
 1. `pipenv install`
 2. `pipenv shell`
-3. `flask run`
+3. `python app.py`
 
 ## front-end
 只是为了用browser sync， 不想用的同学可以无视下面的
@@ -18,28 +18,9 @@
 我用的都是这个网址的颜色：
 [android material](https://material.io/design/color/#tools-for-picking-colors)
 
-## 需要的function
-在[app.py](app.py) 里我写了这两个，应该是填充就行。。
-觉得github麻烦的话直接把程序发我微信就行 ：）
-```python
-def get_song(lyrics):
-    """
-    :param lyrics:
-    :return the json file of generated song including duration and key and lyrics:
-    """
-    pass
-
-def get_img(json_input):
-    """
-    :param json_input:
-    :return the path of generated 五线谱: eg, 'static/upload/img/output_img1.jpg':
-    """
-    pass
-
-def get_midi(json_input):
-    """
-    :param json_input:
-    :return the path of generated midi (with lyrics) : eg, 'static/upload/img/output_song1.mid':
-    """
-    pass
-```
+## 需要安装 musescore
+remote 上用的是lilypond.
+是用来输出图片的，这两个差不多一样，这个版本使用的是musescore。
+如果安装musescore，在[fun_get_img.py](./fun_get_img.py) 的第92行，改成musescore的路径。
+如果都装不了，可能会有报错。
+如果想直接放弃生成图片，可以把[app.py](./app.py)的第39行改成`img_path=''`,这样啥也不用装。
