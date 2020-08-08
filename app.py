@@ -6,8 +6,8 @@ from flask_fontawesome import FontAwesome
 from create_mid import create_midi, get_lyric_time
 from to_img import get_img
 # from fun_get_img import get_img
-# from Text2Song import Text2song
-# from simplified_traditional import chs_to_cht
+from Text2Song import Text2song
+from simplified_traditional import chs_to_cht
 from generateClasses.Seq2Seq import Seq2Seq
 from generate_note_dura import Encoder
 from generate_note_dura import EncoderLayer
@@ -29,10 +29,14 @@ fa = FontAwesome(app)
 @app.route('/to_song')
 def to_song():
     lyrics = request.args.get('lyric')
-    # lyrics_cht = chs_to_cht(lyrics)
-    # mySong = Text2song()
-    # input = mySong.get_song(lyrics_cht)
-    input = generate_note_dura(lyrics)
+    model = request.args.get('model')
+    input = ""
+    if(model=="iComposer"):
+        lyrics_cht = chs_to_cht(lyrics)
+        mySong = Text2song()
+        input = mySong.get_song(lyrics_cht)
+    else:
+        input = generate_note_dura(lyrics)
     with open("output.json", 'w') as file:
         json.dump(input, file, ensure_ascii=False)
     music_path = create_midi(input)
