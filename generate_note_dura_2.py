@@ -5,7 +5,7 @@ from xpinyin import Pinyin
 
 # 模型的定义，包括MultiHeadAttentionLayer、PositionwiseFeedforwardLayer、
 # EncoderLayer、Encoder、DecoderLayer、Decoder、Seq2Seq共7个类
-class MultiHeadAttentionLayer(nn.Module):
+class MultiHeadAttentionLayer2(nn.Module):
     # “多头”注意力机制
     def __init__(self, hid_dim, n_heads, dropout, device):
         super().__init__()
@@ -47,7 +47,7 @@ class MultiHeadAttentionLayer(nn.Module):
         return x, attention
 
 
-class PositionwiseFeedforwardLayer(nn.Module):
+class PositionwiseFeedforwardLayer2(nn.Module):
     # 前馈（feed-forward）层
     def __init__(self, hid_dim, pf_dim, dropout):
         super().__init__()
@@ -62,12 +62,12 @@ class PositionwiseFeedforwardLayer(nn.Module):
         return x
 
 
-class EncoderLayer(nn.Module):
+class EncoderLayer2(nn.Module):
     def __init__(self, hid_dim, n_heads, pf_dim, dropout, device):
         super().__init__()
         self.layer_norm = nn.LayerNorm(hid_dim)
-        self.self_attention = MultiHeadAttentionLayer(hid_dim, n_heads, dropout, device)
-        self.positionwise_feedforward = PositionwiseFeedforwardLayer(hid_dim, pf_dim, dropout)
+        self.self_attention = MultiHeadAttentionLayer2(hid_dim, n_heads, dropout, device)
+        self.positionwise_feedforward = PositionwiseFeedforwardLayer2(hid_dim, pf_dim, dropout)
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, src, src_mask):
@@ -83,7 +83,7 @@ class EncoderLayer(nn.Module):
         return src
 
 
-class Encoder(nn.Module):
+class Encoder2(nn.Module):
     def __init__(self,
                  input_dim,  # 输入数据集的“词汇量”
                  hid_dim,  # hid_dim是n_heads的倍数
@@ -92,7 +92,7 @@ class Encoder(nn.Module):
         self.device = device
         self.tok_embedding = nn.Embedding(input_dim, hid_dim)
         self.pos_embedding = nn.Embedding(max_length, hid_dim)
-        self.layers = nn.ModuleList([EncoderLayer(hid_dim, n_heads, pf_dim, dropout, device)
+        self.layers = nn.ModuleList([EncoderLayer2(hid_dim, n_heads, pf_dim, dropout, device)
                                      for _ in range(n_layers)])
         self.dropout = nn.Dropout(dropout)
         self.scale = torch.sqrt(torch.FloatTensor([hid_dim])).to(device)
@@ -110,13 +110,13 @@ class Encoder(nn.Module):
         return src
 
 
-class DecoderLayer(nn.Module):
+class DecoderLayer2(nn.Module):
     def __init__(self, hid_dim, n_heads, pf_dim, dropout, device):
         super().__init__()
         self.layer_norm = nn.LayerNorm(hid_dim)
-        self.self_attention = MultiHeadAttentionLayer(hid_dim, n_heads, dropout, device)
-        self.encoder_attention = MultiHeadAttentionLayer(hid_dim, n_heads, dropout, device)
-        self.positionwise_feedforward = PositionwiseFeedforwardLayer(hid_dim, pf_dim, dropout)
+        self.self_attention = MultiHeadAttentionLayer2(hid_dim, n_heads, dropout, device)
+        self.encoder_attention = MultiHeadAttentionLayer2(hid_dim, n_heads, dropout, device)
+        self.positionwise_feedforward = PositionwiseFeedforwardLayer2(hid_dim, pf_dim, dropout)
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, trg, enc_src, trg_mask, src_mask):
@@ -142,14 +142,14 @@ class DecoderLayer(nn.Module):
         return trg, attention
 
 
-class Decoder(nn.Module):
+class Decoder2(nn.Module):
     def __init__(self, output_dim, hid_dim, n_layers, n_heads,
                  pf_dim, dropout, device, max_length=100):
         super().__init__()
         self.device = device
         self.tok_embedding = nn.Embedding(output_dim, hid_dim)
         self.pos_embedding = nn.Embedding(max_length, hid_dim)
-        self.layers = nn.ModuleList([DecoderLayer(hid_dim, n_heads, pf_dim, dropout, device)
+        self.layers = nn.ModuleList([DecoderLayer2(hid_dim, n_heads, pf_dim, dropout, device)
                                      for _ in range(n_layers)])
         self.fc_out = nn.Linear(hid_dim, output_dim)
         self.dropout = nn.Dropout(dropout)
@@ -399,16 +399,16 @@ def translate_sentence(sentence, note_in_vocab, note_out_vocab, model, device, m
     return trg_tokens[1:]
 
 
-def generate_note_dura(input_seq):
+def generate_note_dura2(input_seq):
     # input_seq为输入的宋词
     # note_translation, dura_translation分别为生成的note序列和duration序列，以列表形式返回
     # 需要调用translate_sentence函数
     max_seq_len = 128
     device = 'cpu'
-    note_enc = Encoder(394, 270, 3, 6, 300, 0.15, device, max_seq_len)
-    note_dec = Decoder(530, 270, 3, 6, 320, 0.16, device, max_seq_len)
-    dura_enc = Encoder(396, 270, 3, 6, 300, 0.15, device, max_seq_len)
-    dura_dec = Decoder(45, 270, 3, 6, 288, 0.16, device, max_seq_len)
+    note_enc = Encoder2(394, 270, 3, 6, 300, 0.15, device, max_seq_len)
+    note_dec = Decoder2(530, 270, 3, 6, 320, 0.16, device, max_seq_len)
+    dura_enc = Encoder2(396, 270, 3, 6, 300, 0.15, device, max_seq_len)
+    dura_dec = Decoder2(45, 270, 3, 6, 288, 0.16, device, max_seq_len)
     SRC_PAD_IDX = 0
     TRG_PAD_IDX = 0
     note_model = Seq2Seq(note_enc, note_dec, SRC_PAD_IDX, TRG_PAD_IDX, device).to(device)
@@ -455,7 +455,7 @@ def generate_note_dura(input_seq):
 
 # 使用方法范例（可能会出现警告SourceChangeWarning，不影响使用）
 input_seq = '碧云天，黄叶地，秋色连波，波上寒烟翠。山映斜阳天接水，芳草无情，更在斜阳外。黯乡魂，追旅思，夜夜除非，好梦留人睡。明月楼高休独倚，酒入愁肠，化作相思泪。'
-n_d=generate_note_dura(input_seq)
+n_d=generate_note_dura2(input_seq)
 print(n_d)
 # 输出
 # [{'lyrics': '碧 云 天', 'key': ['71', '69', '71'], 'duration': ['0.3', '0.5', '0.5']}, {'lyrics': '黄 叶 地', 'key': ['69', '67', '66'], 'duration': ['0.5', '0.3', '0.3']}, {'lyrics': '秋 色 连 波', 'key': ['64', '67', '66', '67'], 'duration': ['0.5', '0.3', '1.3', '0.5']}, {'lyrics': '波 上 寒 烟 翠', 'key': ['69', '71', '69', '67', '66'], 'duration': ['0.5', '0.3', '0.3', '1.3', '0.3']}, {'lyrics': '山 映 斜 阳 天 接 水', 'key': ['64', '67', '69', '71', '69', '71', '62'], 'duration': ['0.5', '0.3', '0.8', '0.3', '0.3', '0.5', '0.3']}, {'lyrics': '芳 草 无 情', 'key': ['64', '64', '67', '66'], 'duration': ['0.3', '0.5', '0.5', '0.3']}, {'lyrics': '更 在 斜 阳 外', 'key': ['62', '71', '74', '74', '71'], 'duration': ['0.3', '1.3', '0.5', '0.5', '0.3']}, {'lyrics': '黯 乡 魂', 'key': ['69', '71', '71'], 'duration': ['0.3', '0.3', '0.5']}, {'lyrics': '追 旅 思', 'key': ['71', '71', '76'], 'duration': ['0.3', '0.8', '0.3']}, {'lyrics': '夜 夜 除 非', 'key': ['74', '71', '74', '71'], 'duration': ['0.3', '0.5', '0.3', '0.8']}, {'lyrics': '好 梦 留 人 睡', 'key': ['74', '76', '78', '76', '74'], 'duration': ['0.3', '0.5', '0.3', '0.3', '1.3']}, {'lyrics': '明 月 楼 高 休 独 倚', 'key': ['71', '69', '67', '67', '69', '69', '67'], 'duration': ['0.5', '0.3', '0.3', '0.3', '0.5', '0.5', '0.3']}, {'lyrics': '酒 入 愁 肠', 'key': ['71', '72', '72', '71'], 'duration': ['0.3', '0.3', '0.5', '0.3']}, {'lyrics': '化 作 相 思 泪', 'key': ['69', '67', '71', '69', '67'], 'duration': ['0.3', '0.5', '0.3', '0.3', '0.3']}]
