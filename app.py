@@ -16,7 +16,13 @@ from generate_note_dura import PositionwiseFeedforwardLayer
 from generate_note_dura import Decoder
 from generate_note_dura import DecoderLayer
 from generate_note_dura import generate_note_dura
-
+from generate_note_dura import Encoder2
+from generate_note_dura import EncoderLayer2
+from generate_note_dura import MultiHeadAttentionLayer2
+from generate_note_dura import PositionwiseFeedforwardLayer2
+from generate_note_dura import Decoder2
+from generate_note_dura import DecoderLayer2
+from generate_note_dura import generate_note_dura2
 
 import json
 
@@ -35,6 +41,8 @@ def to_song():
         lyrics_cht = chs_to_cht(lyrics)
         mySong = Text2song()
         input = mySong.get_song(lyrics_cht)
+    elif(model=="huang2"):
+        input = generate_note_dura2(lyrics)
     else:
         input = generate_note_dura(lyrics)
     with open("output.json", 'w') as file:
