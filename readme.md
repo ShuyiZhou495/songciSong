@@ -1,5 +1,8 @@
 # 重要的是最后面的《需要的function》，别的不看也行
 ### 有兴趣的同学可以下载，不是必须的。以下的安装方法应该是对的，如果有同学试了不对可以来问我， 那我大概是记错了 ：）
+## Demo
+<img width="720" alt="page1" src="https://github.com/ShuyiZhou495/songci/assets/62908724/94a1e7eb-89f0-415f-b90e-148e537d4e31">
+<img width="720" alt="page2" src="https://github.com/ShuyiZhou495/songci/assets/62908724/5ed01084-75e8-4bee-aaae-e14ccd1122aa">
 
 ## Server-side
 0. 安装pipenv 用`pipenv -v`确定安装了
